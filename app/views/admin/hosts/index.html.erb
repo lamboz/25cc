@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <th>
+      First Name
+    </th>
+    <th>
+      Last Name
+    </th>
+  </thead>
+  <tbody>
+    <% @hosts.each do |host| %>
+    <tr>
+      <td>
+        <%= host.first_name %>
+      </td>
+      <td>
+        <%= host.last_name %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New host', new_admin_host_path %>

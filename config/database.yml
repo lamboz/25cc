@@ -20,6 +20,9 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+<% if ENV.has_key?("PG_PORT") %>
+  port: <%= ENV.fetch("PG_PORT") %>
+<% end %>
 
 development:
   <<: *default
@@ -41,7 +44,7 @@ development:
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
-  #port: 5432
+  #port: 5439
 
   # Schema search path. The server defaults to $user,public
   #schema_search_path: myapp,sharedapp,public

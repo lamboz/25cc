@@ -1,0 +1,33 @@
+# == Schema Information
+#
+# Table name: episodes
+#
+#  id           :integer          not null, primary key
+#  title        :string
+#  description  :text
+#  slug         :string
+#  published_at :datetime
+#  duration     :integer
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+# Indexes
+#
+#  index_episodes_on_published_at  (published_at)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  slug: MyString
+  published_at: 2016-04-11 22:49:42
+  duration: 1
+
+two:
+  title: MyString
+  description: MyText
+  slug: MyString
+  published_at: 2016-04-11 22:49:42
+  duration: 1

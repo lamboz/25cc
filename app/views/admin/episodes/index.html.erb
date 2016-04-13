@@ -1,0 +1,27 @@
+<table>
+  <thead>
+    <th>
+      Episode Number
+    </th>
+    <th>
+      Title
+    </th>
+    <th>
+      Duration
+    </th>
+  </thead>
+  <tbody>
+<% @episodes.each do |episode| %>
+  <tr>
+    <td>
+      1
+    </td>
+    <td>
+      <%= episode.title %>
+    </td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Episode', new_admin_episode_path %>

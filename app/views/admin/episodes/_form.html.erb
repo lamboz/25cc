@@ -1,0 +1,6 @@
+<%= form_for [:admin, @episode] do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_area :description %>
+  <%= f.collection_select :host_ids, Host.all, :id, :first_name, {}, { multiple: true} %>
+  <%= f.submit %>
+<% end %>
