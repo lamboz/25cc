@@ -7,11 +7,18 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+    <link href='https://fonts.googleapis.com/css?family=Cabin:400,700' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
     <%= render 'shared/header' %>
     <%= yield %>
     <%= render 'shared/footer' %>
+    <script>
+    // using jQuery
+      $('video,audio').mediaelementplayer({
+        features: ['playpause','progress','current','duration','volume'],
+      });
+    </script>
   </body>
 </html>

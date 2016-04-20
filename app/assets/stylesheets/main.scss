@@ -1,4 +1,5 @@
 body {
+  font-family: Cabin, sans-serif;
   margin: 0;
 }
 
@@ -7,10 +8,60 @@ body {
   margin: 0 auto;
 }
 
+header#header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  width: 100%;
+  position: absolute;
+
+  nav {
+    text-align: right;
+
+    ul {
+      list-style: none;
+
+      li {
+        display: inline;
+        margin-left: 25px;
+      }
+    }
+  }
+}
+
 #leader {
   height: 415px;
-  background-image: url(https://www.mixcloud.com/media/images/www/static/homepage/homepage-leader-08.jpg);
+  background-image: linear-gradient(rgba(6, 55, 167, 0.85), rgba(44, 71, 121, 0.32)), url(http://www.ticotimes.net/wp-content/uploads/2014/08/140801HospitalMexico1.jpg);
   background-size: cover;
+  border-bottom: 5px solid rgba(255,255,255,0.8);
+  color: #fff;
   padding: 100px 0;
   text-align: center;
+
+  .current_episode {
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.12);
+    margin: 0 auto;
+    width: 60%;
+
+    header {
+      text-align: left;
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+}
+
+#episodes {
+  max-width: 720px;
+}
+
+.episode {
+  border-bottom: 1px solid #eee;
+  padding: 28px 10px;
+
+  .description {
+    line-height: 1.5;
+  }
 }

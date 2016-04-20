@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160413062805) do
+ActiveRecord::Schema.define(version: 20160414020837) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,19 @@ ActiveRecord::Schema.define(version: 20160413062805) do
   add_index "appearances", ["host_id", "episode_id"], name: "index_appearances_on_host_id_and_episode_id", using: :btree
   add_index "appearances", ["host_id"], name: "index_appearances_on_host_id", using: :btree
 
+  create_table "audios", force: :cascade do |t|
+    t.string   "media_data"
+    t.integer  "episode_id"
+    t.string   "url"
+    t.string   "duration"
+    t.string   "size"
+    t.string   "mime"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "audios", ["episode_id"], name: "index_audios_on_episode_id", using: :btree
+
   create_table "episodes", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -69,4 +82,5 @@ ActiveRecord::Schema.define(version: 20160413062805) do
 
   add_foreign_key "appearances", "episodes"
   add_foreign_key "appearances", "hosts"
+  add_foreign_key "audios", "episodes"
 end

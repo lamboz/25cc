@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
     @current_episode = Episode.current
-    @episodes = Episode.published.order("published_at DESC")
+    @episodes = Episode.past_episodes
   end
 end

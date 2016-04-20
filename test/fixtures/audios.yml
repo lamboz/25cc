@@ -1,0 +1,36 @@
+# == Schema Information
+#
+# Table name: audios
+#
+#  id         :integer          not null, primary key
+#  media_data :string
+#  episode_id :integer
+#  url        :string
+#  duration   :string
+#  size       :string
+#  mime       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+# Indexes
+#
+#  index_audios_on_episode_id  (episode_id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  media: MyString
+  episode: one
+  url: MyString
+  duration: MyString
+  size: MyString
+  mime: MyString
+
+two:
+  media: MyString
+  episode: two
+  url: MyString
+  duration: MyString
+  size: MyString
+  mime: MyString
