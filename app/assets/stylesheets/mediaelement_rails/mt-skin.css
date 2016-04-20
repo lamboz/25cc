@@ -1,0 +1,140 @@
+/* Media Elements jS*/
+
+/* General */
+.podcaster-theme .mejs-container * {
+    font-family: Courier, monospace;
+}
+.podcaster-theme .mejs-container .mejs-controls div {
+    font-family: Courier, monospace;
+}
+
+/* Time Digits */
+.podcaster-theme .mejs-container .mejs-controls .mejs-time span {
+    margin:1px 15px 0 15px;
+}
+
+/* Time Rail */
+.podcaster-theme .mejs-controls .mejs-time-rail {
+  padding-top:7px;
+}
+.podcaster-theme .mejs-controls .mejs-time-rail span,
+.podcaster-theme .mejs-controls .mejs-time-rail a {
+    height:6px;
+    border-radius: 3px;
+}
+.podcaster-theme .mejs-controls .mejs-time-rail .mejs-time-float {
+    height:17px;
+}
+.podcaster-theme .mejs-controls .mejs-time-rail .mejs-time-float-current {
+    width:40px;
+    height:13px;
+    text-align: center;
+}
+.podcaster-theme .mejs-controls .mejs-time-rail .mejs-time-float-corner {
+    border-radius: 0;
+}
+
+.podcaster-theme .mejs-controls .mejs-time-rail .mejs-time-current {
+    background: #ff565f;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-loaded, .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+    background: #fff;
+}
+/* Volume */
+
+.podcaster-theme .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+.podcaster-theme .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+    top:12px;
+    height:6px;
+    border-radius: 3px;
+}
+.podcaster-theme .mejs-controls .mejs-volume-button {
+    margin-right: 5px;
+}
+.podcaster-theme .mejs-controls .mejs-volume-button button {
+    background:transparent;
+}
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+    height:6px;
+    border-radius: 3px;
+}
+
+/* Buttons */
+.podcaster-theme .mejs-controls .mejs-button button {
+    font-family: 'Batch Icons';
+    color:#fff;
+    background: transparent no-repeat;
+}
+.podcaster-theme .mejs-controls .mejs-play button {
+    background-position: 0 0;
+}
+.podcaster-theme .mejs-controls .mejs-play button:before {
+    display: block;
+    font-size: 16px;
+    content: '\f16b';
+}
+.podcaster-theme .mejs-controls .mejs-pause button {
+    background-position: 0 -16px;
+}
+.podcaster-theme .mejs-controls .mejs-pause button:before {
+    display: block;
+    font-size: 16px;
+    content: '\f16c';
+}
+.podcaster-theme .mejs-controls .mejs-stop button {
+    background-position: -112px 0;
+}
+.podcaster-theme .mejs-controls .mejs-stop button:before {
+    display: block;
+    font-size: 16px;
+    content: '\f16a';
+}
+.podcaster-theme .mejs-controls .mejs-fullscreen-button button {
+    background-position: -32px 0;
+}
+.podcaster-theme .mejs-controls .mejs-fullscreen-button button:before {
+    content: "\f0a0";
+    display: block;
+    font-size: 16px;
+}
+.podcaster-theme .mejs-controls .mejs-unfullscreen button {
+    background-position: -32px -16px;
+}
+.podcaster-theme .mejs-controls .mejs-unfullscreen-button button:before {
+    content: "\f0a1";
+    display: block;
+    font-size: 16px;
+}
+.podcaster-theme .mejs-controls .mejs-mute button {
+    background-position: -16px -16px;
+}
+.podcaster-theme .mejs-controls .mejs-mute button:before {
+    display: block;
+    font-size: 16px;
+    content: '\f03b';
+}
+.podcaster-theme .mejs-controls .mejs-unmute button {
+    background-position: -16px 0;
+}
+.podcaster-theme .mejs-controls .mejs-unmute button:before {
+    display: block;
+    font-size: 16px;
+    content: '\f038';
+}
+.podcaster-theme .mejs-overlay-button {
+  line-height: 1;
+}
+
+
+/* Off Screen */
+.podcaster-theme .mejs-controls a:focus > .mejs-offscreen {
+  box-shadow: none;
+  padding:24px;
+  display: block;
+  font-weight: normal;
+  padding:10px 15px;
+  font-size: 12px;
+  height: auto;
+}

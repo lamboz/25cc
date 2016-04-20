@@ -1,6 +1,18 @@
-<div class="episode">
-  <h1><%= episode.title %></h1>
-  <p>
-    <%= episode.description %>
-  </p>
-</div>
+<article id="episode-<%= episode.id %>" class="episode">
+  <header>
+    <h1><%= episode.title %></h1>
+    <div class="entry-meta">
+			<span class="posted-on">
+        <span class="entry-date">
+          <time class="entry-time published" datetime="2016-02-24T17:52:54+00:00">Feb 24, 2016</time>
+          <%= episode.duration %>
+        </span>
+      </span>
+    </div>
+  </header>
+  <div class="description">
+    <p>
+      <%= episode.description %>
+    </p>
+  </div>
+</article>

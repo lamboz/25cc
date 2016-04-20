@@ -9,6 +9,7 @@
     <th>
       Duration
     </th>
+    <th></th>
   </thead>
   <tbody>
 <% @episodes.each do |episode| %>
@@ -16,9 +17,8 @@
     <td>
       1
     </td>
-    <td>
-      <%= episode.title %>
-    </td>
+    <td><%= episode.title %></td>
+    <td><%= link_to 'Edit', edit_admin_episode_path(episode) %></td>
   </tr>
 <% end %>
   </tbody>

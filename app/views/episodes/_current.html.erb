@@ -1,8 +1,13 @@
 <div class="current_episode">
   <header>
+    <span>Último episodio</span>
     <h1><%= @current_episode.title %></h1>
   </header>
   <p>
     <%= @current_episode.description %>
+    <!--audio src="<%= @current_episode.audio.media.url %>" preload="auto" /-->
+    <div id="player-wrapper">
+      <audio src="uploads/store/a486631c54604dff6f2b58ec007d16338e585627eef53f5b2c968ad321a1.mp3" preload="auto" />
+    </div>
   </p>
 </div>

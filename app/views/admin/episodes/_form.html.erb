@@ -1,6 +1,14 @@
-<%= form_for [:admin, @episode] do |f| %>
+<%= form_for [:admin, @episode], html: { multipart: true } do |f| %>
   <%= f.text_field :title %>
   <%= f.text_area :description %>
   <%= f.collection_select :host_ids, Host.all, :id, :first_name, {}, { multiple: true} %>
+  <%= f.fields_for :audio, @episode.audio do |af| %>
+    <%= af.file_field :media %>
+  <% end %>
+  <%- if @episode.audio&.media_data? %>
+    <div class="field">
+      <%= @episode.audio.media.url %>
+    </div>
+  <%- end %>
   <%= f.submit %>
 <% end %>

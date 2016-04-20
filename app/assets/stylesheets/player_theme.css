@@ -1,0 +1,31 @@
+
+#player-wrapper {
+  width: 60%;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.mejs-container {
+  background: none;
+  width: 100% !important;
+  height: auto;
+}
+
+.mejs-container .mejs-controls {
+  background: none;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-total {
+  background: linear-gradient(rgba(30, 30, 30, 0.32), rgba(60, 60, 60, 0.32));
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-loaded, .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+    background: rgba(255, 255, 255, 0.70);
+}
+
+
+.mejs-controls .mejs-time-rail .mejs-time-current {
+	background: rgba(255,255,255,0.8);
+}
