@@ -1,23 +1,22 @@
 # == Schema Information
 #
-# Table name: audios
+# Table name: identities
 #
 #  id         :integer          not null, primary key
-#  media_data :string
-#  episode_id :integer
-#  url        :string
-#  duration   :string
+#  user_id    :integer
+#  provider   :string
+#  uid        :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 # Indexes
 #
-#  index_audios_on_episode_id  (episode_id)
+#  index_identities_on_user_id  (user_id)
 #
 
 require 'test_helper'
 
-class AudioTest < ActiveSupport::TestCase
+class IdentityTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

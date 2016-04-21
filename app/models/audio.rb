@@ -7,8 +7,6 @@
 #  episode_id :integer
 #  url        :string
 #  duration   :string
-#  size       :string
-#  mime       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

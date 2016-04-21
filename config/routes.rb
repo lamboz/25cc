@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'users/finish_signup'
+
+  devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
   devise_for :admins
+
+  match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
 
   get 'home/index'
   root 'home#index'

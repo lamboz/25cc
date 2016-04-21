@@ -19,10 +19,12 @@
 require 'test_helper'
 
 class EpisodeTest < ActiveSupport::TestCase
+  should validate_presence_of(:title)
 
-  test ".published returns all records with publised_at in the past" do
-    past = Episode.create!(published_at: 1.day.ago)
-    future = Episode.create!(published_at: Time.now.tomorrow)
+  test ".published returns all records with published_at in the past" do
+    past = Episode.create!(published_at: 1.day.ago, title: 'Test')
+    p past.errors
+    future = Episode.create!(published_at: Time.now.tomorrow, title: 'Test')
 
     results = Episode.published
     assert_includes(results, past)

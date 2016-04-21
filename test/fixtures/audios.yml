@@ -7,8 +7,6 @@
 #  episode_id :integer
 #  url        :string
 #  duration   :string
-#  size       :string
-#  mime       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -20,17 +18,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  media: MyString
+  #media: MyString
   episode: one
   url: MyString
   duration: MyString
-  size: MyString
-  mime: MyString
+  #size: MyString
+  #mime: MyString
 
 two:
-  media: MyString
+  #media: MyString
   episode: two
   url: MyString
   duration: MyString
-  size: MyString
-  mime: MyString
+  #size: MyString
+  #mime: MyString

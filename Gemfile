@@ -31,6 +31,10 @@ gem 'jbuilder', '~> 2.0'
 # gem 'capistrano-rails', group: :development
 
 gem 'devise', github: 'plataformatec/devise'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-linkedin'
+
 gem 'shrine'
 gem 'aws-sdk'
 gem 'rack-mini-profiler'
@@ -53,6 +57,11 @@ group :development do
   gem 'annotate'
   gem 'bullet'
   gem 'quiet_assets'
+end
+
+group :test do
+  gem 'shoulda', '~> 3.5'
+  gem 'shoulda-matchers', '~> 2.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

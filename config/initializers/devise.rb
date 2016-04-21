@@ -151,6 +151,8 @@ Devise.setup do |config|
   # one (and only one) @ exists in the given string. This is mainly
   # to give user feedback and not to assert the e-mail validity.
   # config.email_regexp = /\A[^@]+@[^@]+\z/
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+
 
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
@@ -239,6 +241,12 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+  config.omniauth :facebook,
+    Rails.application.secrets.omniauth['facebook']['key'],
+    Rails.application.secrets.omniauth['facebook']['secret'],
+    scope: 'email, public_profile', info_fields: 'email, first_name, last_name, verified'
+  config.omniauth :twitter, "KEY", "SECRET"
+  config.omniauth :linked_in, "KEY", "SECRET"
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

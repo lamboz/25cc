@@ -26,7 +26,7 @@ class Episode < ApplicationRecord
   accepts_nested_attributes_for :audio, allow_destroy: true
 
   scope :published, -> { where("published_at < '#{Time.now}'") }
-  scope :past_episodes, -> { published.where.not(id: current.id) }
+  scope :past_episodes, -> { published.where.not(id: current&.id) }
 
   def self.current
     order(:published_at).where("published_at < '#{Time.now}'").last

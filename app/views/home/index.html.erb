@@ -6,7 +6,7 @@
         las últimas noticias e investigaciones en la rama.
       </p>
     </div>
-    <%= render 'episodes/current' %>
+    <%= render 'episodes/current' if @current_episode %>
   </div>
 </div>
 <div id="episodes" class="container">
