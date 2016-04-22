@@ -245,8 +245,12 @@ Devise.setup do |config|
     Rails.application.secrets.omniauth['facebook']['key'],
     Rails.application.secrets.omniauth['facebook']['secret'],
     scope: 'email, public_profile', info_fields: 'email, first_name, last_name, verified'
-  config.omniauth :twitter, "KEY", "SECRET"
-  config.omniauth :linked_in, "KEY", "SECRET"
+  config.omniauth :twitter,
+    Rails.application.secrets.omniauth['twitter']['key'],
+    Rails.application.secrets.omniauth['twitter']['secret']
+  config.omniauth :linkedin,
+    Rails.application.secrets.omniauth['linkedin']['key'],
+    Rails.application.secrets.omniauth['linkedin']['secret']
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

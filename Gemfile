@@ -31,9 +31,10 @@ gem 'jbuilder', '~> 2.0'
 # gem 'capistrano-rails', group: :development
 
 gem 'devise', github: 'plataformatec/devise'
+gem 'omniauth-oauth2', '1.3.1'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
-gem 'omniauth-linkedin'
+gem 'omniauth-linkedin-oauth2'
 
 gem 'shrine'
 gem 'aws-sdk'
